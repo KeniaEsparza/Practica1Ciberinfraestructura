@@ -17,7 +17,7 @@ namespace HolaMundo2
         private void btn1validar_Click(object sender, EventArgs e)
         {
             Regex validacion = new Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^\\w+$]).*$");
-            if(string.IsNullOrEmpty(txtContrasena1.Text) &&
+            if (string.IsNullOrEmpty(txtContrasena1.Text) &&
                 string.IsNullOrEmpty(txtContrasena2.Text))
             {
                 MessageBox.Show("Los campos estan vacios");
@@ -31,7 +31,7 @@ namespace HolaMundo2
                 MessageBox.Show("Las contrasenas no son iguales");
                 return;
             }
-            if(validacion.IsMatch(txtContrasena1.Text))
+            if (validacion.IsMatch(txtContrasena1.Text))
             {
                 MessageBox.Show("Las contrasena es VALIDA");
             }
@@ -39,6 +39,11 @@ namespace HolaMundo2
             {
                 MessageBox.Show("La contrasena es INVALIDA");
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
